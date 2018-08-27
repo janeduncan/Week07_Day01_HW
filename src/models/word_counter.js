@@ -9,12 +9,11 @@ WordCounter.prototype.bindEvents = function(){
     const inputtedText = event.detail;
     const result = this.totalWords(inputtedText);
     PubSub.publish("WordCounter:result", result)
-    // console.log(result);
   });
 };
 
 WordCounter.prototype.totalWords = function(text){
-  return true;
+  return text.trim().split(/\s+/).length;
 };
 
 module.exports = WordCounter;
