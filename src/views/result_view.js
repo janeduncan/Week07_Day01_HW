@@ -11,7 +11,7 @@ ResultView.prototype.bindEvents = function(){
 
 ResultView.prototype.updateView = function(result){
   const resultElement = document.querySelector("#result");
-  resultElement.textContent = result;
+  resultElement.textContent = `You typed ${result} word(s)`;
 };
 
 module.exports = ResultView;
